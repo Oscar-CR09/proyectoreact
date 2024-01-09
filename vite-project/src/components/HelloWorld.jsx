@@ -10,10 +10,10 @@ export const HelloWorld = ( {user, id, title } ) => {
         <Fragment> 
 
             <div> { title } </div>
-            <div>Que tal! { user } con el id { id + 10 }</div>
+            <div> Que tal! { user } con el id { id } </div>
+
 
         </Fragment>
 
      );
-   
 }
