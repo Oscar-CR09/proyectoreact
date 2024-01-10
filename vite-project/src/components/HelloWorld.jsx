@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import  PropTypes  from 'prop-types';
 
 export const HelloWorld = ( {user, id, title } ) => {
 
@@ -10,10 +11,17 @@ export const HelloWorld = ( {user, id, title } ) => {
         <Fragment> 
 
             <div> { title } </div>
-            <div> Que tal! { user } con el id { id } </div>
+            <div> Que tal! { user.name }{user.lastName} con el id { id } </div>
 
 
         </Fragment>
 
      );
+
+}
+
+HelloWorld.PropTypes = {
+    title:PropTypes.string.isRequired,
+    id:PropTypes.number.isRequired,
+    user:PropTypes.object
 }
